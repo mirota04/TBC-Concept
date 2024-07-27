@@ -11,6 +11,10 @@
     background-color: #f7fafc;
 }
 
+.list_item:hover{
+    color: #182cc0;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -709,4 +713,102 @@ header{
     color: #687073;
     margin-bottom: 0;
     margin-top: 0;
+}
+
+.section_prizes_swiper{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+
+.prize_card{
+    cursor: pointer;
+    width: 100%;
+    height: 271px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    flex-direction: column;
+    font-size: 14px;
+    text-decoration: none;
+    transition: box-shadow .4s ease-in-out, background-color .4s ease-in-out;
+    display: flex;
+}
+
+.prize_card_img{
+    height: 52px;
+    align-items: center;
+    display: flex;
+}
+
+.prize_title{
+    font-size: 21px;
+    color: #141719;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.prize_card_content{
+    grid-row-gap: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px;
+    display: flex;
+}
+
+.footer{
+    padding-top: 60px;
+}
+
+.footer_top{
+    background-color: white;
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+
+.footer_top_padding{
+    padding-left: 47px;
+    padding-right: 47px;
+    width: 100%;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer_top_inner{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.footer_main{
+    background-color: #fff;
+    padding-bottom: 45px;
+}
+
+.footer_main_inner{
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+
+.footer_title{
+    color: black;
+    padding-bottom: 24px;
+    font-weight: 1000;
+}
+
+.footer_list{
+    grid-row-gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex
+}
+
+.list_item{
+    text-decoration: none;
+    color: #687073;
 }
