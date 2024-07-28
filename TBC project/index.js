@@ -4,6 +4,7 @@ const swiperScrollbarDrag = document.querySelector(".swiper_scrollbar_drag");
 const swiperLeftArrow = document.getElementById("swiper_left_arrow");
 const swiperRightArrow = document.getElementById("swiper_right_arrow");
 const productCard = document.querySelectorAll(".product_card");
+const prizeCard = document.querySelectorAll(".prize_card");
 const sliderScrollAmount = swiperScrollbar.getBoundingClientRect().width / 3;
 
 main();
@@ -43,16 +44,19 @@ function listenToMouseEventsOnSwiperWrapper() {
     scrollLeft = swiperWrapper.scrollLeft;
     swiperWrapper.classList.add("active");
     setProductCardCursor("grabbing");
+    setPrizeCardCursor("grabbing");
   });
 
   swiperWrapper.addEventListener("mouseleave", () => {
     isDown = false;
     setProductCardCursor("pointer");
+    setPrizeCardCursor("pointer");
   });
 
   swiperWrapper.addEventListener("mouseup", () => {
     isDown = false;
     setProductCardCursor("pointer");
+    setPrizeCardCursor("pointer");
   });
 
   swiperWrapper.addEventListener("mousemove", (e) => {
@@ -109,6 +113,12 @@ setProductCardCursor = (value) => {
   for (let i = 0; i < productCard.length; i++) {
     productCard[i].style.cursor = value;
   }
+};
+
+setPrizeCardCursor = (value) => {
+    for (let i = 0; i < prizeCard.length; i++) {
+      prizeCard[i].style.cursor = value;
+    }
 };
 
 function listenToNavigationalArrowclicks() {
